@@ -1,6 +1,9 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { reducer as toastrReducer } from 'react-redux-toastr';
 import * as reducers from './reducers';
 import env from '../constants/env';
+
+reducers.toastr = toastrReducer;
 
 // Create Logger if not in production mode
 const middleWares = [];

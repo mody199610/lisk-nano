@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, browserHistory, Link } from 'react-router-dom';
+import ReduxToastr from 'react-redux-toastr';
 import Header from '../header';
 import Account from '../account';
 import Login from '../login';
@@ -72,6 +73,14 @@ const App = (props) => {
         <Link to='/main/voting'>Voting</Link>
         <Link to='/main/forging'>Forging</Link>
         <Dialog />
+        <ReduxToastr
+          timeOut={4000}
+          newestOnTop={false}
+          preventDuplicates
+          position="bottom-right"
+          transitionIn="fadeIn"
+          transitionOut="fadeOut"
+          progressBar/>
       </section>
     </Router>
   );
